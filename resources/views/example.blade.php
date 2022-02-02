@@ -1,0 +1,35 @@
+@extends('layouts.app')
+@section('content')
+<table>
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>vendor_id</td>
+            <td>department_id</td>
+            <td>hr_id</td>
+            <td>is_employee</td>
+            <td>nid</td>
+            <td>scope_of_work</td>
+            <td>mobile</td>
+            <td>blood</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($emps as $emp)
+        <tr>
+            <td>{{$emp->id}}</td>
+            <td>{{$emp->name}}</td>
+            <td>{{$emp->vendor_id}}</td>
+            <td>{{$emp->department_id}}</td>
+            <td>{{$emp->hr_id}}</td>
+            <td>{{$emp->is_employee}}</td>
+            <td>{{$emp->nid}}</td>
+            <td>{{$emp->scope_of_work}}</td>
+            <td>{{$emp->mobile}}</td>
+            <td>{{$emp->blood}}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+@endsection
